@@ -34,6 +34,4 @@ sudo iptables -X
 ```
 📸Screenshot included documenting the flushed rules.
 
-————————————————————————————
-
-Step 2: Allowing SSH and blocking other TCP
+# Step 2: Allowing SSH and blocking other TCP
