@@ -83,10 +83,6 @@ nc -lvnp 22
 ```bash
 nc -lvnp 80
 ```
-📸 Screenshot showing Netcat listeners for ports 22 and 80 alongside the iptables rules. This confirms which ports are open and reachable.
-
-![Netcat Open Ports](netcat_open_ports.png)
-
 # Step 5: Scan Open Ports with Nmap
 
 ## Scan ports 22 and 80 on the target
@@ -94,4 +90,5 @@ nc -lvnp 80
 nmap -p22,80 10.0.2.15
 ```
 📸Screenshot showing Nmap scan results: port 22 is open (SSH), and port 80 is filtered (HTTP).
+![Netcat Open Ports](netcat_open_ports.png)
 ![Nmap Open & Filtered Ports](nmap_open_filtered_ports.png)
