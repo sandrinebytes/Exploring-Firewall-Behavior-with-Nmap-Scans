@@ -30,7 +30,7 @@ Delete all user-defined chains:
 ```bash
 sudo iptables -X
 ```
-📸Screenshot included documenting the flushed rules.
+📸Screenshot showing flushed iptables rules on the left and Netcat listeners on ports 22 and 80 on the right, confirming the firewall state and open ports.
 ![Flushed Rules](flushed_rules.png)
 
 # Step 2: Allowing SSH and blocking other TCP
