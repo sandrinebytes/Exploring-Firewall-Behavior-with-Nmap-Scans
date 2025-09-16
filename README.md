@@ -19,7 +19,7 @@ Tools: Nmap, Linux VM (or host), iptables/Windows Firewall Objective: Explore 
 
 ## 🛠Commands & Steps
 
-### Step 1: Flush Existing Firewall Rules
+# Step 1: Flush Existing Firewall Rules
 
 Flush all existing rules:  
 ```bash
@@ -33,7 +33,7 @@ sudo iptables -X
 📸Screenshot included documenting the flushed rules.
 ![Flushed Rules](flushed_rules.png)
 
-## Step 2: Allowing SSH and blocking other TCP
+# Step 2: Allowing SSH and blocking other TCP
 ### Example: Allow SSH, block all other incoming TCP traffic
 
 ```bash
