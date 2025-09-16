@@ -66,6 +66,8 @@ sudo iptables -A INPUT -j DROP
 ```bash
 sudo iptables -L -v
 ```
+📸Screenshot showing the iptables rules applied to block port 80 while allowing port 22.
+![IPTables Block Port 80](iptables_block_80.png)
 ⚡ Observation: Ports 22 and 80 are open, others blocked.
 
 #Step 4: Verify with Netcat
@@ -83,7 +85,7 @@ nc -lvnp 80
 
 #Step 5: Scan Open Ports with Nmap
 
-## Scan only ports 22 and 80 on the target
+## Scan ports 22 and 80 on the target
 ```bash
 nmap -p22,80 10.0.2.15
 ```
