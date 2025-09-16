@@ -46,3 +46,24 @@ sudo iptables -A INPUT -j DROP
 sudo iptables -L -v
 ```
 ⚡Observation: SSH is allowed, all other incoming TCP traffic blocked.
+
+# Step 3: Open Ports 22 and 80
+
+## Allow incoming TCP on SSH (22) and HTTP (80)
+```bash
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+```
+## Allow responses for established connections
+```bash
+sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+```
+## Drop all other incoming traffic
+```bash
+sudo iptables -A INPUT -j DROP
+```
+## List current rules with verbose output
+```bash
+sudo iptables -L -v
+```
+⚡ Observation: Ports 22 and 80 are open, others blocked.
