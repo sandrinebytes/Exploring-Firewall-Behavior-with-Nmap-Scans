@@ -74,7 +74,7 @@ sudo iptables -L -v
 ⚡ Observation: Ports 22 and 80 are open, others blocked.
 
 # Step 4: Verify Open Ports with Netcat
-I use Netcat listeners on ports 22 (SSH) and 80 (HTTP) to verify which ports respond in real time. No screenshot is provided for this step, but running the following commands allows me to test port availability before scanning with Nmap:
+I use Netcat listeners on ports 22 (SSH) and 80 (HTTP) to verify which ports respond in real time. No screenshot is included for this step. Running the following commands allows me to test port availability before scanning with Nmap:
 
 ## Netcat listener for SSH
 ```bash
@@ -84,18 +84,19 @@ nc -lvnp 22
 ```bash
 nc -lvnp 80
 ```
-# Step 5: Scan Open Ports with Nmap
+⚡ Observation: Ports that respond indicate they are open or reachable, confirming the firewall rules.
 
-## Scan ports 22 and 80 on the target
+# Step 5: Scan Open Ports with Nmap
+I open the firewall script in vim to review the rules, then run an Nmap scan to test port availability:
 ```bash
 nmap -p22,80 10.0.2.15
 ```
-## Before scanning, we open the firewall script in vim to review the rules, then run nmap -p22,80 10.0.2.15 to test port availability. Port 22 shows as open (SSH) and port 80 shows as open (HTTP).
-
-📸 Screenshot showing vim firewall.sh opened to view the firewall script, followed by running nmap -p22,80 to test port availability before applying any additional rules. Port 22 shows as open (SSH) and port 80 shows as open (HTTP).
+📸Screenshot showing vim firewall.sh to review the firewall rules, followed by running nmap -p22,80. Port 22 is open (SSH), and port 80 is open (HTTP) before applying any additional rules.
 
 ![Netcat Open Ports](netcat_open_ports.png)
 
 📸Screenshot showing Nmap scan results: port 22 is open (SSH), and port 80 is filtered (HTTP).
 
 ![Nmap Open & Filtered Ports](nmap_open_filtered_ports.png)
+
+⚡ Observation: The scan confirms that firewall rules affect port visibility, with port 22 fully open and port 80 filtered.
