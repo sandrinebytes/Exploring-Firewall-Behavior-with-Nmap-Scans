@@ -79,3 +79,4 @@ nc -lvnp 22
 nc -lvnp 80
 ```
 📸 Screenshot showing Netcat session with open ports 22 and 80.
+![Netcat Open Ports](netcat_open_ports.png)
