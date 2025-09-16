@@ -21,8 +21,6 @@ Tools: Nmap, Linux VM (or host), iptables/Windows Firewall Objective: Explore 
 
 ### Step 1: Flush Existing Firewall Rules
 
-## 🛠 Commands & Steps
-
 Flush all existing rules:  
 ```bash
 sudo iptables -F
@@ -34,4 +32,4 @@ sudo iptables -X
 ```
 📸Screenshot included documenting the flushed rules.
 
-# Step 2: Allowing SSH and blocking other TCP
+## Step 2: Allowing SSH and blocking other TCP
