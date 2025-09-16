@@ -21,7 +21,10 @@ Tools: Nmap, Linux VM (or host), iptables/Windows Firewall Objective: Explore 
 
 ### Step 1: Flush Existing Firewall Rules
 
-Flush all existing rules
+## 🛠 Commands & Steps
+
+Flush all existing rules:  
+```bash
 sudo iptables -F
 
 Delete all user-defined chains
