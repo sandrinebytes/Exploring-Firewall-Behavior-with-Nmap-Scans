@@ -67,3 +67,15 @@ sudo iptables -A INPUT -j DROP
 sudo iptables -L -v
 ```
 ⚡ Observation: Ports 22 and 80 are open, others blocked.
+
+#Step 4: Verify with Netcat
+
+## Example Netcat listener for SSH
+```bash
+nc -lvnp 22
+```
+## Example Netcat listener for HTTP
+```bash
+nc -lvnp 80
+```
+📸 Screenshot showing Netcat session with open ports 22 and 80.
