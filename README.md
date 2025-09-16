@@ -31,5 +31,6 @@ Delete all user-defined chains:
 sudo iptables -X
 ```
 📸Screenshot included documenting the flushed rules.
+![Flushed Rules](flushed_rules.png)
 
 ## Step 2: Allowing SSH and blocking other TCP
