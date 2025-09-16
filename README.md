@@ -89,5 +89,5 @@ nc -lvnp 80
 ```bash
 nmap -p22,80 10.0.2.15
 ```
-📸 Screenshot showing Nmap scan results detecting open (port 22) and filtered (port 80) ports.
+📸Screenshot showing Nmap scan results: port 22 is open (SSH), and port 80 is filtered (HTTP).
 ![Nmap Open & Filtered Ports](nmap_open_filtered_ports.png)
