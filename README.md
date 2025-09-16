@@ -24,10 +24,9 @@ Tools: Nmap, Linux VM (or host), iptables/Windows Firewall Objective: Explore 
 ## 🛠 Commands & Steps
 
 Flush all existing rules:  
-```bash
 sudo iptables -F
 
-Delete all user-defined chains
+Delete all user-defined chains:
 sudo iptables -X
 
 📸Screenshot included documenting the flushed rules.
