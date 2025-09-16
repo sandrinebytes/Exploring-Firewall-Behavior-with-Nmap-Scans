@@ -84,6 +84,7 @@ nc -lvnp 22
 nc -lvnp 80
 ```
 📸 Screenshot showing Netcat listeners for ports 22 and 80 alongside the iptables rules. This confirms which ports are open and reachable.
+
 ![Netcat Open Ports](netcat_open_ports.png)
 
 # Step 5: Scan Open Ports with Nmap
