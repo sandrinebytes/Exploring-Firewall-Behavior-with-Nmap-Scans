@@ -34,3 +34,14 @@ sudo iptables -X
 ![Flushed Rules](flushed_rules.png)
 
 ## Step 2: Allowing SSH and blocking other TCP
+## Example: Allow SSH, block all other incoming TCP traffic
+
+```bash
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -j DROP
+```
+
+## List current rules with verbose output
+```bash
+sudo iptables -L -v
+```
