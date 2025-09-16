@@ -30,8 +30,10 @@ Delete all user-defined chains:
 ```bash
 sudo iptables -X
 ```
-📸Screenshot showing flushed iptables rules on the left and Netcat listeners on ports 22 and 80 on the right, confirming the firewall state and open ports.
+📸Screenshot showing flushed iptables rules on the left and Netcat listeners on ports 22 and 80 on the right. The Netcat listeners are included to simultaneously verify which ports respond, confirming the firewall state and open ports.
 ![Flushed Rules](flushed_rules.png)
+
+⚡ Observation: All previous firewall rules are cleared. Netcat listeners allow us to check port availability in real time.
 
 # Step 2: Allowing SSH and blocking other TCP
 ### Example: Allow SSH, block all other incoming TCP traffic
