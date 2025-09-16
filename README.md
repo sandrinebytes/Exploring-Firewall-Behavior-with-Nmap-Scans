@@ -19,7 +19,7 @@ Tools: Nmap, Linux VM (or host), iptables/Windows Firewall Objective: Explore 
 
 ## 🛠Commands & Steps
 
-Step 1: Flush Existing Firewall Rules
+### Step 1: Flush Existing Firewall Rules
 
 # Flush all existing rules
 sudo iptables -F
