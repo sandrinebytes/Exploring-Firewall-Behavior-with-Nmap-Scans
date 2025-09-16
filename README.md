@@ -1,4 +1,7 @@
 # Exploring-Firewall-Behavior-with-Nmap-Scans
+
+⚠️ Note: All scanning and firewall testing demonstrated here are intended for educational or authorized testing purposes only. Do not use these techniques on networks you do not own or have permission to test.
+
 This repository explores firewall behavior with Nmap scans and basic iptables configuration. It demonstrates identifying open and filtered ports, applying interface-specific rules, using port spoofing, and testing proxy routing. Screenshots 📸 and commands provide hands-on examples to understand how firewalls affect network traffic.
 
 Tools: Nmap, Linux VM (or host), iptables/Windows Firewall Objective: Explore how firewalls affect network scanning, identify open/filtered ports, and practice basic firewall configuration and enumeration techniques.
@@ -100,3 +103,18 @@ nmap -p22,80 10.0.2.15
 ![Nmap Open & Filtered Ports](nmap_open_filtered_ports.png)
 
 ⚡ Observation: The scan confirms that firewall rules affect port visibility, with port 22 fully open and port 80 filtered.
+
+# Understanding Scan Types and Firewall Detection
+
+There are two approaches we can use to identify filtered versus open ports:
+1. Regular Nmap Scan (TCP SYN Scan):
+    * This is the default scan Nmap uses, which does not complete the full 3-way TCP handshake.
+    * In our case, this scan gave enough information to determine which ports are open (22) and which are filtered (80).
+2. ACK Scan (-sA):
+    * An ACK scan can help identify if a firewall is blocking traffic.
+    * It works by sending ACK packets to the target to see how the firewall responds, helping differentiate between filtered and unfiltered ports.
+    * This is useful when you suspect a firewall might be interfering with connectivity.
+
+Using the regular scan was sufficient to identify filtered and open ports, but an ACK scan is another method for confirming firewall behavior.
+
+⚡ Observation: Default scan was enough, but ACK scan provides further firewall confirmation.
