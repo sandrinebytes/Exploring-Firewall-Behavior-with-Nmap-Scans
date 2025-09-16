@@ -72,17 +72,18 @@ sudo iptables -L -v
 ![IPTables Block Port 80](iptables_block_80.png)
 ⚡ Observation: Ports 22 and 80 are open, others blocked.
 
-# Step 4: Verify with Netcat
+# Step 4: Verify Open Ports with Netcat
+We use Netcat listeners on ports 22 (SSH) and 80 (HTTP) while checking the firewall rules. This allows us to see which ports respond in real time.
 
-## Example Netcat listener for SSH
+## Netcat listener for SSH
 ```bash
 nc -lvnp 22
 ```
-## Example Netcat listener for HTTP
+## Netcat listener for HTTP
 ```bash
 nc -lvnp 80
 ```
-📸 Screenshot showing Netcat session with open ports 22 and 80.
+📸 Screenshot showing Netcat listeners for ports 22 and 80 alongside the iptables rules. This confirms which ports are open and reachable.
 ![Netcat Open Ports](netcat_open_ports.png)
 
 # Step 5: Scan Open Ports with Nmap
