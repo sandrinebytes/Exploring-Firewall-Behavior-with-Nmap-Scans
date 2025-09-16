@@ -80,3 +80,11 @@ nc -lvnp 80
 ```
 📸 Screenshot showing Netcat session with open ports 22 and 80.
 ![Netcat Open Ports](netcat_open_ports.png)
+
+#Step 5: Scan Open Ports with Nmap
+
+## Scan only ports 22 and 80 on the target
+```bash
+nmap -p22,80 10.0.2.15
+```
+📸 Screenshot showing Nmap scan detecting open ports ("nmap open ports")
