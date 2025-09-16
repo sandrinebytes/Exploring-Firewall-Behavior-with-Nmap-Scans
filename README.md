@@ -3,13 +3,13 @@ This repository explores firewall behavior with Nmap scans and basic iptables co
 
 Tools: Nmap, Linux VM (or host), iptables/Windows Firewall Objective: Explore how firewalls affect network scanning, identify open/filtered ports, and practice basic firewall configuration and enumeration techniques.
 
-💻Lab Setup
+## 💻Lab Setup
 * Environment: Linux VM (VirtualBox)
 * Network Mode: NAT / Host-Only / Bridged
 * Firewall: iptables
 * Notes: Screenshots were taken at each major step for documentation.📸
 
-* 🎯Lab Goals
+## 🎯Lab Goals
 1. Flush existing firewall rules to start fresh.
 2. Open ports 22 (SSH) and 80 (HTTP) to allow TCP responses.
 3. Verify open ports using Netcat.
