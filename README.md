@@ -89,6 +89,10 @@ nc -lvnp 80
 ```bash
 nmap -p22,80 10.0.2.15
 ```
-📸Screenshot showing Nmap scan results: port 22 is open (SSH), and port 80 is filtered (HTTP).
+📸 Screenshot showing vim firewall.sh opened to view the firewall script, followed by running nmap -p22,80 to test port availability before applying any additional rules. Port 22 shows as open (SSH) and port 80 shows as open (HTTP).
+
 ![Netcat Open Ports](netcat_open_ports.png)
+
+📸Screenshot showing Nmap scan results: port 22 is open (SSH), and port 80 is filtered (HTTP).
+
 ![Nmap Open & Filtered Ports](nmap_open_filtered_ports.png)
