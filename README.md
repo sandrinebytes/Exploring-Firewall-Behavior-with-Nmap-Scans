@@ -168,5 +168,5 @@ In this lab, we explored how firewalls affect network scanning and practiced sev
 * 🔹 Applied interface-specific firewall rules for granular control
 * 🔹 Experimented with port spoofing to test firewall responses
 * 🔹 Tested proxy usage with Nmap to route scans and bypass filtering
-* 
+  
 💡 Overall, these exercises demonstrate how firewalls control traffic and how scanning techniques reveal their behavior, helping build a foundation for network security analysis.
