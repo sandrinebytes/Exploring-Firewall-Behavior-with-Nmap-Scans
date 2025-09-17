@@ -118,3 +118,14 @@ There are two approaches we can use to identify filtered versus open ports:
 Using the regular scan was sufficient to identify filtered and open ports, but an ACK scan is another method for confirming firewall behavior.
 
 ⚡ Observation: Default scan was enough, but ACK scan provides further firewall confirmation.
+
+# Restricting Firewall Rules by Interface
+* Interface-specific rules: iptables allows you to apply rules to a specific network interface.
+* For example, you can block a port on one interface while leaving it open on another.
+* The -e option in iptables lets you specify which interface the rule should apply to.
+Example:
+
+## Block TCP traffic on port 80 only on eth0
+```bash
+sudo iptables -A INPUT -i eth0 -p tcp --dport 80 -j DROP
+```
