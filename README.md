@@ -133,3 +133,19 @@ This allows more granular firewall control, letting you protect certain networks
 ⚡ Observation: Granular control allows selective network protection.
 
 ⚠️ Note: These examples illustrate just a few ways to configure firewall rules. Many other configurations and variations are possible depending on the network and security requirements.🔒
+
+# Port Spoofing🕵️‍♀️
+Introduction: Port spoofing is an optional technique for testing firewall behavior and traffic manipulation.
+Definition: Sending packets that appear from a different source port. Can:
+* 🔹 Bypass firewall rules
+* 🔹 Hide true traffic source
+* 🔹 Trick a target system
+
+## How to Spoof a Port in Nmap:
+Spoof source port 39149 while scanning target
+```bash
+nmap -p 80 --source-port 39149 10.0.2.15
+```
+📸Screenshot showing spoofed source port 39149
+![Description of image](spoof_source_port.png)
+⚡ Observation: Helps evade simple firewall rules, effectiveness varies with firewall configuration.
