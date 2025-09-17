@@ -151,3 +151,22 @@ nmap -p 80 --source-port 39149 10.0.2.15
 ![Description of image](spoof_source_port.png)
 
 ⚡ Observation: Helps evade simple firewall rules, effectiveness varies with firewall configuration.
+
+# Experiment with Proxies
+
+💻 You can use --proxies in Nmap to route scans through different hosts.
+
+⚡ Observation: Useful to test how firewalls handle traffic from multiple sources or bypass filtering rules.
+
+
+# Conclusion ✅
+
+In this lab, we explored how firewalls affect network scanning and practiced several techniques to understand and manipulate traffic:
+
+* 🔹 Identified open and filtered ports using Nmap scans
+* 🔹 Configured iptables rules to allow, block, and filter specific ports
+* 🔹 Applied interface-specific firewall rules for granular control
+* 🔹 Experimented with port spoofing to test firewall responses
+* 🔹 Tested proxy usage with Nmap to route scans and bypass filtering
+* 
+💡 Overall, these exercises demonstrate how firewalls control traffic and how scanning techniques reveal their behavior, helping build a foundation for network security analysis.
